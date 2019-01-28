@@ -1,6 +1,8 @@
-#Flexible menu
+# Flexible menu
 
-###Usage
+### Demo 
+[GitHub Pages](https://n-spl1nter.github.io/flexible-menu/).
+### Usage
 ```javascript
 import FlexibleMenu from './FlexibleMenu';
 
@@ -10,7 +12,7 @@ const fm = new FlexibleMenu({
 
 fm.init();
 ```
-###Public API
+### Public API
 | name | type | description |
 | ---- | ---- | ----------- |
 | init | method | Initialize plugin, throws error if already initialized |  
