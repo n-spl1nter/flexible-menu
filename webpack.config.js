@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
-const srcPath = './src/';
+const srcPath = './examples/src/';
 const buildPath = './build/';
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
 
   entry: {
     app: [
-      path.resolve(__dirname, `${srcPath}scripts/index`)
+      path.resolve(__dirname, `${srcPath}index`)
     ]
   },
 
@@ -53,7 +53,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(srcPath + '/assets/index.html'),
+      template: path.join(srcPath + '/index.html'),
       filename: 'index.html',
       path: buildPath
     }),

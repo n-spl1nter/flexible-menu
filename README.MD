@@ -2,6 +2,10 @@
 
 ### Demo 
 [GitHub Pages](https://n-spl1nter.github.io/flexible-menu/).
+### Install
+```javascript
+npm install flexible-menu
+```
 ### Usage
 ```javascript
 import FlexibleMenu from './FlexibleMenu';

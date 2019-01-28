@@ -1,19 +1,25 @@
 {
   "name": "flexible-menu",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Flexible menu with hidden items",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development webpack --watch --colors --progress",
     "build": "cross-env NODE_ENV=production webpack -p",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
-  "keywords": [],
+  "keywords": [
+    "flexible",
+    "menu"
+  ],
   "author": "Alexey Rodin <razraz.odinodin@gmail.com>",
   "homepage": "http://n-spl1nter.github.io/flexible-menu",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-transform-classes": "^7.2.2",
@@ -31,5 +37,11 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5"
-  }
+  },
+  "browserslist": [
+    ">0.5%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 10"
+  ]
 }
